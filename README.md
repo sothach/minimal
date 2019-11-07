@@ -7,8 +7,7 @@ a large data set without a corresponding - and deleterious - increase is memory 
 
 #### Calculate minimum value
 
-Create an Account for the authenticated User if an Account for that User does
-not already exist. Each User can only have one Account.
+Given a data-set consisting of a set of comma-seperated Long integer values (positive and negative), determine and answer with the lowest value
 
 **URL** : `/api/minimal`
 
