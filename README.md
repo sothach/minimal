@@ -1,5 +1,5 @@
 # Minimal
-Efficiently process a sequence of integers to determine the minimal values
+Efficiently process a sequence of integers to determine the minimal value
 ## Design
 This is not a production-grade solution, but demonstrates the use of streaming to process
 a large data set without a corresponding - and deleterious - increase is memory footprint
