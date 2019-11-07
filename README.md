@@ -3,14 +3,14 @@ Efficiently process a sequence of integers to determine the minimal value
 ## Design
 This is not a production-grade solution, but demonstrates the use of streaming to process
 a large data set without a corresponding - and deleterious - increase is memory footprint
-## Condfiguration
+## Configuration
 The maximum length of allowed frames (in this case, discerete integer values) while decoding, set in `conf/application.conf`:
 ```bash
 input.frame.size=1000
 ```
 ## API
 
-#### Calculate minimum value
+### Calculate minimum value
 
 Given a data-set consisting of a set of comma-seperated Long integer values (positive and negative), determine and answer with the lowest value
 
@@ -24,7 +24,7 @@ Given a data-set consisting of a set of comma-seperated Long integer values (pos
 
 **Data constraints**
 
-Provide comma-seperated list of integer values in the domain of `java.lang.Long`
+Provide comma-separated list of integer values in the domain of `java.lang.Long`
 
 **Data example** 
 
@@ -72,6 +72,37 @@ Send data to the api:
 This will respond with the minimum value from the data-set:
 ```bash
 -999968087
+```
+## Metrics
+### Retrieve JVM metrics
+API to retrieve JVM metrics values from running service (@codahale)
+
+**URL** : `/admin/metrics`
+
+**Method** : `GET`
+
+**Auth required** : No
+
+**Permissions required** : None
+
+**Data example** 
+
+```json
+{
+  "version" : "4.0.0",
+  "gauges" : {
+    "jvm.attribute.name" : {
+      "value" : "73662@LM-AMS-14506441"
+    },
+    "jvm.attribute.uptime" : {
+      "value" : 150893
+    },
+    "jvm.attribute.vendor" : {
+      "value" : "Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 25.192-b12 (1.8)"
+    }
+  },
+  "timers" : { }
+}
 ```
 
 ## Testing

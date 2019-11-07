@@ -12,7 +12,7 @@ libraryDependencies ++= Seq(
   ws, guice,
   "org.webjars" %% "webjars-play" % playVersion,
   "org.webjars" % "bootstrap" % "3.1.1-2",
-
+  "com.kenshoo" %% "metrics-play" % "2.7.3_0.8.1",
 
   "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test,
   "org.mockito" % "mockito-all" % "2.0.2-beta" % Test,
