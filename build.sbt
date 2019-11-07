@@ -20,5 +20,3 @@ libraryDependencies ++= Seq(
 )
 
 coverageExcludedPackages := "<empty>;Reverse.*;router.*;controllers.javascript;play.api.*;views.html.*"
-
-herokuAppName in Compile := "minimal"

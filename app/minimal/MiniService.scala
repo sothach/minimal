@@ -3,22 +3,20 @@ package minimal
 import java.util.concurrent.TimeUnit
 
 import akka.actor.ActorSystem
-import akka.stream.scaladsl.{Flow, Framing, Sink, Source}
+import akka.stream.scaladsl.{Flow, Framing, Source}
 import akka.stream.{ActorMaterializer, ActorMaterializerSettings, Supervision}
 import akka.util.{ByteString, Timeout}
 import javax.inject.{Inject, Singleton}
 import play.api.libs.streams.Accumulator
 import play.api.{Configuration, Environment, Logger}
 
-import scala.annotation.tailrec
 import scala.concurrent.{ExecutionContextExecutor, Future}
 
 @Singleton
 class MiniService @Inject()(configuration: Configuration,
                             environment: Environment)
                            (implicit system: ActorSystem) {
-
-  private implicit val ec: ExecutionContextExecutor = system.dispatcher
+  private implicit val ec: ExecutionContextExecutor = system.dispatchers.lookup("mini-context")
   val logger = Logger(this.getClass)
 
   val decider: Supervision.Decider = {
