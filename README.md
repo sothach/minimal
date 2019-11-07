@@ -4,7 +4,7 @@ Efficiently process a sequence of integers to determine the minimal values
 This is not a production-grade solution, but demonstrates the use of streaming to process
 a large data set without a corresponding - and deleterious - increase is memory footprint
 ## Condfiguration
-The maximum length of allowed frames (in this case, discerete integer values) while decoding, set in `conf/application.conf':
+The maximum length of allowed frames (in this case, discerete integer values) while decoding, set in `conf/application.conf`:
 ```bash
 input.frame.size=1000
 ```
