@@ -3,6 +3,11 @@ Efficiently process a sequence of integers to determine the minimal values
 ## Design
 This is not a production-grade solution, but demonstrates the use of streaming to process
 a large data set without a corresponding - and deleterious - increase is memory footprint
+## Condfiguration
+The maximum length of allowed frames (in this case, discerete integer values) while decoding, set in `conf/application.conf':
+```bash
+input.frame.size=1000
+```
 ## API
 
 #### Calculate minimum value
@@ -64,7 +69,7 @@ Start the application locally:
 ```
 Send data to the api:
 ```bash
-%curl  http://localhost:9000/api/minimal -H "Content-type: multipart/form-data" -d @test/resources/bigfile.dat 
+% curl  http://localhost:9000/api/minimal -H "Content-type: multipart/form-data" -d @test/resources/bigfile.dat 
 ```
 This will respond with the minimum value from the data-set:
 ```bash
@@ -74,8 +79,8 @@ This will respond with the minimum value from the data-set:
 ## Testing
 The provided unit tests verify that integer values in the domain
 -1000000000 thru 1000000000 are correctly processed, and invalid values
-filtered out of the processing.  A data-set of 9999 randomll generated values
-are used, see `test/resources/bigfile.dat`:
+filtered out of the processing.  A data-set of 9999 randomly-generated values
+is used, see `test/resources/bigfile.dat`:
 ```bash
 sort --numeric-sort bigfile.dat | head 
 -999968087
