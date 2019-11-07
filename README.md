@@ -58,9 +58,7 @@ Provide comma-seperated list of integer values in the domain of `java.lang.Long`
 
 **Code** : `400 BAD REQUEST`
 
-**Content** : `no data provided`
-
-**Content example**
+**Content example** : `no data provided`
 
 ## Run Service
 Start the application locally:
