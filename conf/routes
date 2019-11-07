@@ -1,2 +1,2 @@
-POST        /api/minimal          controllers.ApiController.minimal
-GET         /admin/metrics        com.kenshoo.play.metrics.MetricsController.metrics
+POST        /api/minimal        controllers.ApiController.minimal
+GET         /metrics            com.kenshoo.play.metrics.MetricsController.metrics
