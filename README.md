@@ -92,7 +92,7 @@ API to retrieve JVM metrics values from running service (@codahale)
   "version" : "4.0.0",
   "gauges" : {
     "jvm.attribute.name" : {
-      "value" : "73662@LM-AMS-14506441"
+      "value" : "73662@PDQ17526984"
     },
     "jvm.attribute.uptime" : {
       "value" : 150893
