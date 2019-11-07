@@ -77,7 +77,7 @@ This will respond with the minimum value from the data-set:
 ### Retrieve JVM metrics
 API to retrieve JVM metrics values from running service (@codahale)
 
-**URL** : `/admin/metrics`
+**URL** : `/metrics`
 
 **Method** : `GET`
 
